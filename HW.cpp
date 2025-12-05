@@ -16,7 +16,7 @@ int main()
 
 	//создание списка процессов
 	ProcessList list;
-	//добавление элементов
+	//добавление элементовd
 	list.insert(p2);
 	list.insert(p3);
 	list.insert(p1);
