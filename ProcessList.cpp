@@ -15,12 +15,12 @@ std::string statusToString(ProcessStatus status)
 
 std::ostream& operator<<(std::ostream& os, const PCB& pcb)
 {
-	os << "Ïðîöåññ: " << pcb.processID << std::endl;
-	os << "Èìÿ: " << pcb.processName << std::endl;
-	os << "Ñòàòóñ: " << statusToString(pcb.processStatus) << std::endl;
-	os << "Ñ÷¸ò÷èê êîììàíä: " << pcb.commandCounter << std::endl;
+	os << "ÐŸÑ€Ð¾Ñ†ÐµÑÑ: " << pcb.processID << std::endl;
+	os << "Ð˜Ð¼Ñ: " << pcb.processName << std::endl;
+	os << "Ð¡Ñ‚Ð°Ñ‚ÑƒÑ: " << statusToString(pcb.processStatus) << std::endl;
+	os << "Ð¡Ñ‡Ñ‘Ñ‚Ñ‡Ð¸Ðº ÐºÐ¾Ð¼Ð¼Ð°Ð½Ð´: " << pcb.commandCounter << std::endl;
 
-	os << "Ðåãèñòðû CPU: [ ";
+	os << "Ð ÐµÐ³Ð¸ÑÑ‚Ñ€Ñ‹ CPU: [ ";
 
 	for (int i = 0; i < 8; i++)
 	{
@@ -116,13 +116,13 @@ void ProcessList::printList()
 {
 	if (head == nullptr)
 	{
-		std::cout << "Ñïèñîê ïóñò" << std::endl;
+		std::cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚" << std::endl;
 		return;
 	}
 
 	ListNode* current = head;
 
-	std::cout << "---Äàííûå î ïðîöåññàõ---" << std::endl;
+	std::cout << "---Ð”Ð°Ð½Ð½Ñ‹Ðµ Ð¾ Ð¿Ñ€Ð¾Ñ†ÐµÑÑÐ°Ñ…---" << std::endl;
 	for (int i = 0; i < size; i++)
 	{
 		if (current == nullptr)
@@ -138,7 +138,7 @@ void ProcessList::printList()
 	std::cout << std::endl;
 }
 
-ProcessList::ListNode::ListNode(const PCB& data, ListNode* next): data(data), next(next)//ùà
+ProcessList::ListNode::ListNode(const PCB& data, ListNode* next): data(data), next(next)//Ñ‰Ð°
 {
 }
 
