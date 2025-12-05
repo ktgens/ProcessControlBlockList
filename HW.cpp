@@ -1,19 +1,12 @@
 #include <iostream>
 #include "PCB.h"
 #include "ProcessList.h"
-
-#ifdef _WIN32
-	#include "Windows.h"
-#endif
-
+#pragma execution_character_set("utf-8")
 
 int main()
 {
 
-#ifdef _WIN32
-	SetConsoleOutputCP(1251);
-	SetConsoleCP(1251);
-#endif
+
 
 
 	PCB p1 = { 101, "System", ProcessStatus::Running, 0, { 10, 20, 30, 40,10, 20, 30, 40 } };
